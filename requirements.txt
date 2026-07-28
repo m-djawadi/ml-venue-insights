@@ -1,0 +1,7 @@
+# Core (scrape + stats + cross-venue compare). For the heavy paths, use extras:
+#   pip install -e ".[analyze]"     # embeddings, clustering, search  <- recommended
+#   pip install -e ".[topics]"      # legacy embeddings + KMeans
+#   pip install -e ".[bertopic]"    # full BERTopic path
+#   pip install -e ".[all]"
+requests>=2.28
+beautifulsoup4>=4.11
