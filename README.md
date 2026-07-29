@@ -79,19 +79,9 @@ Every stage takes `--venues`: either `all`, one venue, or a comma-separated list
 - **Cross-venue stages** (`--compare`, `--theme-mix`) compare venues against each other, so they build a pooled corpus (`<venues>_pooled_corpus.jsonl`) on demand. They never overwrite the per-venue files.
 
 ```bash
-ml-venue-insights --venues icml --scrape --start 2020 --end 2025
 # --- single venue: exactly like before ---
+ml-venue-insights --venues icml --scrape --start 2020 --end 2025
 ml-venue-insights --venues icml --analyze --llm
-
-# NEURIPS (Neural Information Processing Systems)
-# ICML (International Conference on Machine Learning)
-# ICLR (International Conference on Learning Representations)
-# RLC (Reinforcement Learning Conference)
-# COLT (Conference on Learning Theory)
-
-ml-venue-insights --venues icml,iclr,rlc,colt --scrape --start 2020 --end 2025
-python run.py --venues icml,iclr,rlc --scrape --start 2020 --end 2025               
-
 
 # --- the fast venues (APIs, seconds not hours) ---
 ml-venue-insights --venues iclr,rlc --scrape --start 2020 --end 2025
